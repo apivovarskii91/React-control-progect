@@ -29,8 +29,8 @@ function Cart(): JSX.Element {
     ])
 
     const [totalUSD, setTotalUSD] = useState<number>(0)
-    const [totalEUR, setTotalEUR] = useState<number>(0)
-    const [totalUAH, setTotalUAH] = useState<number>(0)
+    const [totalEUR, setTotalEUR] = useState<number>(0) // eslint-disable-line @typescript-eslint/no-unused-vars
+    const [totalUAH, setTotalUAH] = useState<number>(0) // eslint-disable-line @typescript-eslint/no-unused-vars
     const [selectedCurrency, setSelectedCurrency] = useState<string>('USD')
 
     const handleIncrease = (itemId: number): void => {
@@ -43,7 +43,7 @@ function Cart(): JSX.Element {
         calculateTotal()
     }
 
-    const handleCurrencyChange = (selectedCurrency: string): void => {
+    const handleCurrencyChange = (selectedCurrency: string) => {
         setSelectedCurrency(selectedCurrency)
         calculateTotal()
     }
